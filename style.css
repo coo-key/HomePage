@@ -1,0 +1,232 @@
+* {
+	user-select: none;
+	font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+	font-weight: 400;
+	padding: 0;
+	margin: 0;
+	scroll-behavior: smooth;
+}
+body {
+	width: 100%;
+	-webkit-text-size-adjust: 100%;
+	overflow-x: hidden;
+	overflow-wrap: anywhere;
+	color: #111;
+}
+hr {
+	border: none;
+	height: 1px;
+	background-image: linear-gradient(to right, #0000 0%, #555 50%, #0000 100%);
+	margin-block: 20px;
+}
+h1 {
+	font-size: 2.1rem;
+}
+h2 {
+	font-size: 2rem;
+}
+p, a, li {
+	font-size: 1.1rem;
+}
+small {
+	font-size: 1rem;
+	line-height: 2;
+}
+header {
+	top: 0;
+	z-index: 100;
+	position: fixed;
+	background: #ddd1;
+	backdrop-filter: blur(7px);
+	-webkit-backdrop-filter: blur(7px);
+	height: 70px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+#logo, #cont {
+	padding: 7px 24px;
+}
+#logo {
+	width: 100px;
+	height: 50px;
+}
+#cont {
+	display: flex;
+	p {
+		font-size: 1.8rem;
+		color: #fff;
+		background: #111;
+		line-height: 1;
+		padding: 4px 8px;
+		border: 1px solid #76f;
+		border-radius: 0 5px 5px 0;
+		border-left: 6px solid #76f;
+		box-shadow: 0 0 10px #76f;
+		transition-duration: .3s;
+	}
+	@media (any-hover:hover) {
+		p:hover {
+			opacity: .7;
+	}
+	}
+}
+#menu {
+	background: #1118;
+	color: #222;
+	translate: 130px 70px;
+	font-weight: 400;
+	padding: 10px;
+	position: fixed;
+	width: 200px;
+	border-radius: 10px;
+	transition-duration: .2s;
+	list-style: none;
+	li {
+		padding: 5px;
+		margin: 7px;
+		border-bottom: 1px solid #fff;
+		transition-duration: .3s;
+	}
+	li::before {
+		content: "#";
+		color: #fff;
+		font-size: 1.5rem;
+		margin-right: 15px;
+		font-weight: 700;
+	}
+	a {
+		font-size: 1.2rem;
+		text-decoration: none;
+		color: #fff;
+		user-select: none;
+		transition-duration: .3s;
+	}
+	@media (any-hover:hover) {
+		li {
+			border-color: #fff1;
+		}
+		li:hover {
+			border-color: #fff;
+		}
+		a:hover {
+			color: #fffa;
+		}
+	}
+}
+main {
+	width: 100%;
+}
+#welcome {
+	background-image: url(./assets/back.webp);
+	background-size: cover;
+	width: 100%;
+	min-height: 75vh;
+	display: flex;
+	align-items: center;
+	padding-block: 5vh;
+	justify-content: center;
+}
+.card {
+	z-index: 99;
+	border: 1.5px solid #fff2;
+	box-shadow: 0 5px 8px #0008;
+	background: #fff3;
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	border-radius: 10px;
+	text-align: center;
+	padding: 17px;
+	transition-duration: .3s;
+	h1, p {
+		padding-block: 15px;
+	}
+	h1 {
+		font-weight: 600;
+		line-height: 1;
+	}
+	p {
+		font-size: 1.2rem;
+		line-height: 1;
+		max-width: 40em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 5px;
+		img {
+			width: 1lh;
+			height: 1lh;
+		}
+	}
+}
+@media (any-hover:hover) {
+	.card:hover {
+		scale: 1.1;
+		background-color: #fff6;
+	}
+}
+#content {
+	min-height: 40vh;
+	padding: 30px 5px;
+	padding-top: 100px;
+	display: grid;
+	grid-template-columns: 1fr 1.5fr 1fr;
+	gap: 40px 30px;
+	text-align: center;
+	section {
+		margin-block: 20px;
+		text-align: left;
+		grid-column: 2;
+		border-block: 1px solid #555;
+		padding: 40px 10px;
+		box-shadow: 0 0 0 #0003;
+		transition-duration: .3s;
+		h2 {
+			line-height: 1;
+			border-left: 7px solid #76f;
+			padding-left: 10px;
+			display: inline;
+			box-decoration-break: clone;
+			-webkit-box-decoration-break: clone;
+		}
+		p {
+			margin-block: 35px 20px;
+			text-align: left;
+			line-height: 1.7;
+		}
+		a {
+			color: #eb4034;
+		}
+	}
+	@media (any-hover:hover) {
+		section:hover {
+			box-shadow: 3px 5px 8px #0003;
+		}
+	}
+}
+@media (width <= 850px) {
+	#content {
+		grid-template-columns: 1fr 15fr 1fr;
+	}
+}
+footer {
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 50px;
+	height: 50vh;
+	background: #222;
+	background: linear-gradient(to top, #333, #111);
+	clip-path: polygon(0 100px, 50% 0, 100% 100px, 100% 100%, 0 100%);
+	a, small {
+		color: #fff;
+		font-family: system-ui, sans-serif;
+		font-size: 1.5rem;
+		font-weight: 100;
+	}
+	a {
+		font-size: 1rem;
+	}
+}
