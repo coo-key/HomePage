@@ -73,16 +73,26 @@ header {
 	}
 }
 #menu {
+	margin-inline: 15vw;
+	margin-top: 80px;
+	inset: 0;
+	scale: 0;
 	background: #1118;
 	color: #222;
-	translate: 130px 70px;
 	font-weight: 400;
-	padding: 10px;
 	position: fixed;
-	width: 200px;
+	width: auto;
+	height: 400%;
+	padding: 15px;
+	padding-bottom: 40px;
 	border-radius: 10px;
-	transition-duration: .2s;
+	transition-duration: .3s;
 	list-style: none;
+	text-align: center;
+	@media (width >= 850px) {
+		margin-inline: 20vw;
+		padding-bottom: 20px;
+	}
 	li {
 		padding: 5px;
 		margin: 7px;
