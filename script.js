@@ -5,12 +5,12 @@ let hoge = true;
 menu_btn.addEventListener("click", () => {
   if (hoge === true) {
     hoge = false;
-    menu.style.translate = "-120px 70px";
+    menu.style.scale = "1";
     menu_btn.style.borderLeftWidth = "1px";
     menu_btn.style.scale = "1.2";
   } else {
     hoge = true;
-    menu.style.translate = "130px 70px";
+    menu.style.scale = "0";
     menu_btn.style.borderLeftWidth = "6px";
     menu_btn.style.scale = "1";
   }
